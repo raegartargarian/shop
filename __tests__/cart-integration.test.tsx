@@ -1,7 +1,8 @@
-import { render, screen, act } from "@testing-library/react";
+import { render, screen, act, renderHook } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { AddToCartButton } from "@/components/AddToCartButton";
 import { CartIcon } from "@/components/CartIcon";
+import { useCart } from "@/hooks/useCart";
 
 jest.mock("next/link", () => {
   // eslint-disable-next-line @typescript-eslint/no-require-imports
@@ -47,6 +48,40 @@ describe("cart integration", () => {
 
     await user.click(buttons[1]);
     expect(icon).toHaveTextContent("3");
+  });
+
+  it("reorder moves an item between positions", () => {
+    const { result } = renderHook(() => useCart());
+
+    act(() => {
+      result.current.add("p1");
+      result.current.add("p2");
+      result.current.add("p3");
+    });
+
+    expect(result.current.items.map((it) => it.productId)).toEqual([
+      "p1",
+      "p2",
+      "p3",
+    ]);
+
+    act(() => {
+      result.current.reorder(0, 2);
+    });
+    expect(result.current.items.map((it) => it.productId)).toEqual([
+      "p2",
+      "p3",
+      "p1",
+    ]);
+
+    act(() => {
+      result.current.reorder(2, 0);
+    });
+    expect(result.current.items.map((it) => it.productId)).toEqual([
+      "p1",
+      "p2",
+      "p3",
+    ]);
   });
 
   it("button shows transient added feedback and resets", async () => {

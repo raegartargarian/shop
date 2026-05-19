@@ -120,7 +120,19 @@ export function useCart() {
     write([]);
   };
 
+  const reorder = (from: number, to: number) => {
+    mutate((cur) => {
+      if (from === to || from < 0 || to < 0 || from >= cur.length || to >= cur.length) {
+        return cur;
+      }
+      const copy = cur.slice();
+      const [moved] = copy.splice(from, 1);
+      copy.splice(to, 0, moved);
+      return copy;
+    });
+  };
+
   const count = items.reduce((sum, it) => sum + it.qty, 0);
 
-  return { items, add, remove, setQty, clear, count };
+  return { items, add, remove, setQty, clear, reorder, count };
 }
