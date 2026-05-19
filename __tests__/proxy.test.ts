@@ -3,7 +3,7 @@
  */
 import { NextRequest } from "next/server";
 import { SignJWT } from "jose";
-import { proxy } from "../proxy";
+import { proxy } from "@/proxy";
 
 beforeAll(() => {
   process.env.JWT_SECRET = "test-secret-for-jest";
