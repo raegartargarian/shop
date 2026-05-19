@@ -10,6 +10,19 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+
+  --color-ink-50: #f7f7f6;
+  --color-ink-100: #ececea;
+  --color-ink-200: #d6d6d2;
+  --color-ink-300: #b8b8b2;
+  --color-ink-400: #8e8e87;
+  --color-ink-500: #6b6b64;
+  --color-ink-600: #4f4f49;
+  --color-ink-700: #3a3a35;
+  --color-ink-800: #25251f;
+  --color-ink-900: #14140f;
+
+  --color-accent: #c2693a;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -23,4 +36,15 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  font-feature-settings: "ss01", "cv11";
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+::selection {
+  background: var(--color-accent);
+  color: #fff;
 }

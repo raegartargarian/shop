@@ -1,0 +1,205 @@
+[
+  {
+    "id": "p-001",
+    "slug": "harbor-over-ear-headphones",
+    "name": "Harbor Over-Ear Headphones",
+    "price": 249.99,
+    "category": "audio",
+    "description": "Closed-back cans tuned for long listening sessions. The clamp is gentle, the pads breathe, and the cable detaches when you inevitably step on it.",
+    "image": "https://picsum.photos/seed/harbor-over-ear-headphones/800/800",
+    "stock": 18
+  },
+  {
+    "id": "p-002",
+    "slug": "drift-wireless-earbuds",
+    "name": "Drift Wireless Earbuds",
+    "price": 129,
+    "category": "audio",
+    "description": "Small, light, and mostly invisible. Battery lasts a full workday with ANC on; longer with it off.",
+    "image": "https://picsum.photos/seed/drift-wireless-earbuds/800/800",
+    "stock": 64
+  },
+  {
+    "id": "p-003",
+    "slug": "stoneworks-bookshelf-speakers",
+    "name": "Stoneworks Bookshelf Speakers",
+    "price": 599.5,
+    "category": "audio",
+    "description": "Two-way bookshelf pair with a soft-dome tweeter. Pair them with a small amp and a corner of the room you like.",
+    "image": "https://picsum.photos/seed/stoneworks-bookshelf-speakers/800/800",
+    "stock": 7
+  },
+  {
+    "id": "p-004",
+    "slug": "field-portable-dac",
+    "name": "Field Portable DAC",
+    "price": 189,
+    "category": "audio",
+    "description": "USB-C in, balanced 4.4mm out. For laptops that forgot how to do audio.",
+    "image": "https://picsum.photos/seed/field-portable-dac/800/800",
+    "stock": 22
+  },
+  {
+    "id": "p-005",
+    "slug": "lowtide-vinyl-turntable",
+    "name": "Lowtide Vinyl Turntable",
+    "price": 449,
+    "category": "audio",
+    "description": "Belt-drive, manual operation, pre-mounted cartridge so you can play a record within five minutes of opening the box. Built-in phono stage you can switch off when you grow out of it.",
+    "image": "https://picsum.photos/seed/lowtide-vinyl-turntable/800/800",
+    "stock": 11
+  },
+  {
+    "id": "p-006",
+    "slug": "loft-portable-speaker",
+    "name": "Loft Portable Speaker",
+    "price": 79.95,
+    "category": "audio",
+    "description": "Pocket-bag-sized. IP67. Honest about its bass.",
+    "image": "https://picsum.photos/seed/loft-portable-speaker/800/800",
+    "stock": 3
+  },
+
+  {
+    "id": "p-007",
+    "slug": "ember-ceramic-mug-set",
+    "name": "Ember Ceramic Mug Set",
+    "price": 38,
+    "category": "home",
+    "description": "Four mugs, hand-finished, no two glazes identical. Holds 350ml, dishwasher fine if you must.",
+    "image": "https://picsum.photos/seed/ember-ceramic-mug-set/800/800",
+    "stock": 41
+  },
+  {
+    "id": "p-008",
+    "slug": "linen-throw-blanket",
+    "name": "Linen Throw Blanket",
+    "price": 119,
+    "category": "home",
+    "description": "Stonewashed Belgian linen. Heavier than it looks. Gets softer every wash.",
+    "image": "https://picsum.photos/seed/linen-throw-blanket/800/800",
+    "stock": 25
+  },
+  {
+    "id": "p-009",
+    "slug": "walnut-cutting-board",
+    "name": "Walnut Cutting Board",
+    "price": 64.5,
+    "category": "home",
+    "description": "End-grain walnut, 18 by 12 inches, finished with food-safe oil. Resharpens your knives slightly slower than a plastic one ruins them.",
+    "image": "https://picsum.photos/seed/walnut-cutting-board/800/800",
+    "stock": 14
+  },
+  {
+    "id": "p-010",
+    "slug": "halo-desk-lamp",
+    "name": "Halo Desk Lamp",
+    "price": 149,
+    "category": "home",
+    "description": "Warm 2700K LED, stepless dimming, a single brass knob. No app, no firmware, nothing to update.",
+    "image": "https://picsum.photos/seed/halo-desk-lamp/800/800",
+    "stock": 9
+  },
+  {
+    "id": "p-011",
+    "slug": "shoji-paper-lantern",
+    "name": "Shoji Paper Lantern",
+    "price": 89,
+    "category": "home",
+    "description": "Hand-folded washi over a beech frame. Ships flat; assembles in about a minute.",
+    "image": "https://picsum.photos/seed/shoji-paper-lantern/800/800",
+    "stock": 52
+  },
+
+  {
+    "id": "p-012",
+    "slug": "ridge-32l-daypack",
+    "name": "Ridge 32L Daypack",
+    "price": 159,
+    "category": "outdoor",
+    "description": "One main compartment, one laptop sleeve, no extra zippers to break. Recycled 420D nylon, YKK hardware.",
+    "image": "https://picsum.photos/seed/ridge-32l-daypack/800/800",
+    "stock": 30
+  },
+  {
+    "id": "p-013",
+    "slug": "alpine-titanium-cookpot",
+    "name": "Alpine Titanium Cookpot",
+    "price": 74.99,
+    "category": "outdoor",
+    "description": "750ml. 132 grams. Folds its own handle.",
+    "image": "https://picsum.photos/seed/alpine-titanium-cookpot/800/800",
+    "stock": 17
+  },
+  {
+    "id": "p-014",
+    "slug": "salt-flat-sunglasses",
+    "name": "Salt Flat Sunglasses",
+    "price": 95,
+    "category": "outdoor",
+    "description": "Polarized, glass lenses, acetate frame. Heavier than the plastic ones; that is the point.",
+    "image": "https://picsum.photos/seed/salt-flat-sunglasses/800/800",
+    "stock": 5
+  },
+  {
+    "id": "p-015",
+    "slug": "campline-tent-2p",
+    "name": "Campline Tent 2P",
+    "price": 1299.5,
+    "category": "outdoor",
+    "description": "Double-wall, freestanding, 2.1kg packed. Two doors, two vestibules, room for one person and a dog or two people who like each other a lot.",
+    "image": "https://picsum.photos/seed/campline-tent-2p/800/800",
+    "stock": 4
+  },
+  {
+    "id": "p-016",
+    "slug": "trailwarden-headlamp",
+    "name": "Trailwarden Headlamp",
+    "price": 49,
+    "category": "outdoor",
+    "description": "USB-C rechargeable. 400 lumens on high, 12 hours on low, red mode for not-blinding-your-tentmate.",
+    "image": "https://picsum.photos/seed/trailwarden-headlamp/800/800",
+    "stock": 38
+  },
+
+  {
+    "id": "p-017",
+    "slug": "kabuto-leather-wallet",
+    "name": "Kabuto Leather Wallet",
+    "price": 89.95,
+    "category": "accessories",
+    "description": "Bifold, six card slots, full-grain veg-tan that starts pale and earns a patina over a year or two.",
+    "image": "https://picsum.photos/seed/kabuto-leather-wallet/800/800",
+    "stock": 28
+  },
+  {
+    "id": "p-018",
+    "slug": "monolith-mechanical-watch",
+    "name": "Monolith Mechanical Watch",
+    "price": 689,
+    "category": "accessories",
+    "description": "38mm case, Swiss automatic movement, sapphire crystal. Loses about four seconds a day. Don't wear it diving.",
+    "image": "https://picsum.photos/seed/monolith-mechanical-watch/800/800",
+    "stock": 6
+  },
+  {
+    "id": "p-019",
+    "slug": "raw-canvas-belt",
+    "name": "Raw Canvas Belt",
+    "price": 29.99,
+    "category": "accessories",
+    "description": "One strap, one buckle, one length you cut to fit. Hard to ruin.",
+    "image": "https://picsum.photos/seed/raw-canvas-belt/800/800",
+    "stock": 73
+  },
+  {
+    "id": "p-020",
+    "slug": "merino-watch-cap",
+    "name": "Merino Watch Cap",
+    "price": 42,
+    "category": "accessories",
+    "description": "Single-ply merino, no itch, no logo. Three colors that all look the same in low light.",
+    "image": "https://picsum.photos/seed/merino-watch-cap/800/800",
+    "stock": 19
+  }
+]

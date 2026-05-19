@@ -1,36 +1,44 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# shopfront
 
-## Getting Started
+A small Next.js storefront built as a take-home — product catalog, JWT-based sign-in, and a multi-step checkout, all in one repo.
 
-First, run the development server:
+## install
+
+```bash
+npm install
+```
+
+## dev
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Then open http://localhost:3000.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## env
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Copy `.env.example` to `.env.local` and fill it in. There's only one variable for now (`JWT_SECRET`); change it to something random before going anywhere near production.
 
-## Learn More
+## demo accounts
 
-To learn more about Next.js, take a look at the following resources:
+Hardcoded for the take-home — see `src/lib/auth/users.ts` for the available users and their passwords. There is no signup flow.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## tests
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+npm test
+```
 
-## Deploy on Vercel
+Jest with jsdom; React Testing Library for component-level tests.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## optimizations
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Product images use `next/image` with explicit `sizes="(min-width: 768px) 33vw, 50vw"` and `priority` on the first three cards in the grid so the LCP image isn't lazy-loaded. Catalog reads run through `cache()` so the same render pass shares one fetch, and `generateStaticParams` lets product detail pages prerender at build time. The payment summary on the review step is pulled in with `next/dynamic` (`ssr: false`) since it's only meaningful client-side and shouldn't bloat the initial bundle. App Router `loading.tsx` files on the catalog, product detail, and checkout segments give a streamed skeleton while server work resolves.
+
+## things i'd do next
+
+- Replace the JSON product file with a real database (Postgres + a thin query layer would be enough).
+- Paginate the catalog. Twenty items is fine to scroll; two thousand is not.
+- Move the cart to optimistic updates so the UI doesn't wait on the round-trip.
+- Swap the fake checkout for a real provider (Stripe Payment Element is the obvious one).
