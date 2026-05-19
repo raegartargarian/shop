@@ -43,8 +43,8 @@ function Pill({
       className={cn(
         "rounded-full border px-3 py-1 text-sm capitalize transition-colors",
         active
-          ? "border-ink-900 bg-ink-900 text-ink-50"
-          : "border-ink-200 text-ink-700 hover:border-ink-400",
+          ? "border-accent bg-accent text-white"
+          : "border-ink-200 bg-white text-ink-700 hover:border-ink-400 hover:text-ink-900",
       )}
     >
       {children}

@@ -33,13 +33,13 @@ export function ProductGrid({ products }: Props) {
 
   return (
     <div data-testid="product-grid" className="flex flex-col gap-6">
-      <div className="flex flex-col gap-4">
+      <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
         <input
           type="search"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           placeholder="Search products"
-          className="w-full rounded-md border border-ink-200 bg-white px-3 py-2 text-sm text-ink-900 placeholder:text-ink-400"
+          className="w-full rounded-md border border-ink-200 bg-white px-3 py-2 text-sm text-ink-900 placeholder:text-ink-400 focus:border-accent focus:outline-none md:w-80"
         />
         <CategoryFilter
           categories={categories}
@@ -48,12 +48,19 @@ export function ProductGrid({ products }: Props) {
         />
       </div>
 
+      <p className="text-xs text-ink-500">
+        {items.length} {items.length === 1 ? "item" : "items"}
+      </p>
+
       {items.length === 0 ? (
-        <p className="py-16 text-center text-sm text-ink-500">
-          No products match your search.
-        </p>
+        <div className="flex flex-col items-center gap-2 rounded-lg border border-dashed border-ink-200 py-16 text-center">
+          <p className="text-sm text-ink-700">Nothing matches that.</p>
+          <p className="text-xs text-ink-500">
+            Try clearing the search or picking a different category.
+          </p>
+        </div>
       ) : (
-        <div className="grid grid-cols-2 gap-6 md:grid-cols-3">
+        <div className="grid grid-cols-2 gap-x-6 gap-y-10 md:grid-cols-3 lg:grid-cols-4">
           {items.map((p, i) => (
             <ProductCard key={p.id} product={p} priority={i < 3} />
           ))}
